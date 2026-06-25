@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study+</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">S+</div>
+        <div>
+          <h1>Study+</h1>
+          <p>Seu assistente de estudos</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h2>Matéria</h2>
+        <select id="materia">
+          <option>Geral</option>
+          <option>Matemática</option>
+          <option>Português</option>
+          <option>História</option>
+          <option>Geografia</option>
+          <option>Biologia</option>
+          <option>Física</option>
+          <option>Química</option>
+          <option>Inglês</option>
+        </select>
+      </div>
+
+      <div class="sidebar-card">
+        <h2>Modo</h2>
+        <select id="modo">
+          <option value="explicar">Explicar</option>
+          <option value="explicar_resposta" selected>Explicar + Resposta</option>
+          <option value="revisao">Revisão para Prova</option>
+          <option value="quiz">Quiz</option>
+          <option value="resumo">Resumo</option>
+        </select>
+      </div>
+
+      <div class="sidebar-card tips">
+        <h2>Dicas de uso</h2>
+        <ul>
+          <li>Digite o tema ou a pergunta da atividade</li>
+          <li>Escolha a matéria e o modo de estudo</li>
+          <li>Use Revisão + Quiz para estudar para prova</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <h2>Study+ Web</h2>
+          <p>Explicações, revisão e treino para provas</p>
+        </div>
+        <div class="status-badge ok">Modo Web Ativo</div>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="message ai">
+          <div class="message-avatar">S+</div>
+          <div class="message-bubble">
+            <h3>Bem-vindo ao Study+</h3>
+            <p>
+              Escolha a matéria, selecione o modo e envie sua pergunta.
+              Eu posso explicar, resumir, revisar e criar quiz para você estudar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="composer">
+        <textarea
+          id="pergunta"
+          placeholder="Ex.: Explique a fotossíntese / Me ajude a revisar a Revolução Francesa / Crie um quiz sobre equação do 1º grau"
+        ></textarea>
+
+        <div class="composer-actions">
+          <button id="limparBtn" class="secondary-btn">Limpar chat</button>
+          <button id="enviarBtn" class="primary-btn">Enviar</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
